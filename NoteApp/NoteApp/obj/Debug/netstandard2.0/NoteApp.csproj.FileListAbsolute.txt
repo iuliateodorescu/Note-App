@@ -1,0 +1,14 @@
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\bin\Debug\netstandard2.0\NoteApp.deps.json
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\bin\Debug\netstandard2.0\NoteApp.dll
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\bin\Debug\netstandard2.0\ref\NoteApp.dll
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\bin\Debug\netstandard2.0\NoteApp.pdb
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.csprojAssemblyReference.cache
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.AssemblyInfoInputs.cache
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.AssemblyInfo.cs
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.csproj.CoreCompileInputs.cache
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.dll
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\ref\NoteApp.dll
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.pdb
