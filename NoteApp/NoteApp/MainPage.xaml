@@ -35,15 +35,19 @@
                 Text="Save" Command="{Binding SaveCommand}"/>
 
         <Button Grid.Row="2" Grid.Column="1" 
-                BackgroundColor="LightPink" TextColor="White"  
+                BackgroundColor="OrangeRed"  TextColor="White"  
                 Text="Delete" Command="{Binding DeleteCommand}"/>
 
-        <CollectionView ItemsSource="{Binding AllNotes}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+        <CollectionView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding AllNotes}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedNote}"
+                        SelectionChangedCommand="{Binding SelectedNoteChangedCommand}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
+                    <StackLayout Padding="10,10">
                         <Frame>
-                            <Label Text="{Binding .}" FontSize="Title"/>
+                            <Label Text="{Binding .}" FontSize="Title" VerticalTextAlignment="Center"/>
                         </Frame>
                     </StackLayout>
                 </DataTemplate>

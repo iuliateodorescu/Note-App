@@ -12,3 +12,4 @@ C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\Xam
 C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.dll
 C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\ref\NoteApp.dll
 C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\NoteApp.pdb
+C:\Users\Iulia\source\repos\NoteApp\NoteApp\NoteApp\obj\Debug\netstandard2.0\DetailPage.xaml.g.cs

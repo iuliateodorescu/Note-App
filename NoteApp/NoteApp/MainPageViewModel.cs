@@ -13,17 +13,35 @@ namespace NoteApp.ViewModel
     {
         public MainPageViewModel()
         {
+            AllNotes = new ObservableCollection<string>();
+
             SaveCommand = new Command(() =>
             {
                 AllNotes.Add(TheNote);
                 TheNote = string.Empty;
             });
-            DeleteCommand = new Command(() => TheNote = string.Empty);
+
+            DeleteCommand = new Command(() =>
+            {
+                TheNote = string.Empty;
+            });
+
+            SelectedNoteChangedCommand = new Command(async () =>
+            {
+                //new up view model for Detail Page
+                var detailVM = new DetailPageViewModel(SelectedNote);
+                //new up the page
+                var detailPage = new DetailPage();
+
+                detailPage.BindingContext = detailVM;
+
+                await Application.Current.MainPage.Navigation.PushModalAsync(detailPage);
+            });
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ObservableCollection<string> AllNotes { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<string> AllNotes { get; set; }
 
         string theNote;
         public string TheNote
@@ -38,7 +56,21 @@ namespace NoteApp.ViewModel
             }
         }
 
+
+        string selectedNote;
+        public string SelectedNote
+        {
+            get => selectedNote;
+            set 
+            {
+                selectedNote = value;
+                var args = new PropertyChangedEventArgs(nameof(SelectedNote));
+
+                PropertyChanged?.Invoke(this, args);
+            }
+        }
         public Command SaveCommand { get; }
         public Command DeleteCommand { get; }
+        public Command SelectedNoteChangedCommand { get; }
     }
 }
