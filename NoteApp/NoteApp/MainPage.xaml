@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/formd/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:NoteApp.ViewModel"
+             mc:Ignorable="d"
              x:Class="NoteApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -19,16 +27,28 @@
                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
 
         <Editor Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-                Placeholder="Enter Text Here"/>
+                Placeholder="Enter Text Here"
+                Text="{Binding TheNote}"/>
 
         <Button Grid.Row="2" Grid.Column="0" 
-                BackgroundColor="GreenYellow"  TextColor="White" Text="Save"/>
+                BackgroundColor="GreenYellow"  TextColor="White" 
+                Text="Save" Command="{Binding SaveCommand}"/>
 
         <Button Grid.Row="2" Grid.Column="1" 
-                BackgroundColor="LightPink" TextColor="White"  Text="Delete"/>
+                BackgroundColor="LightPink" TextColor="White"  
+                Text="Delete" Command="{Binding DeleteCommand}"/>
 
-        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
-               FontSize="Large"/>
+        <CollectionView ItemsSource="{Binding AllNotes}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame>
+                            <Label Text="{Binding .}" FontSize="Title"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 
 </ContentPage>
